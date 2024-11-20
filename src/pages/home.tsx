@@ -54,7 +54,7 @@ const deleteHandler = async (id: number) => {
              <Link
                 to={`/view-booking/${record.bookingid}`}
               >
-               View
+               View Booking
               </Link>
               {/* <Link
                 to={`/create-booking`}
@@ -66,7 +66,7 @@ const deleteHandler = async (id: number) => {
               >
                Update Booking
               </Link>
-              <button onClick={() => deleteHandler(record.bookingid)}>Delete</button>
+              <button onClick={() => deleteHandler(record.bookingid)}>Delete Booking</button>
               </div>
           </>
         );
@@ -77,7 +77,7 @@ const deleteHandler = async (id: number) => {
   return (
     <>
     {loading && <div className="flex justify-center items-center h-[80vh]"><h1>Loding...</h1></div>}
-{ !loading &&     <Card
+    { !loading &&     <Card
         title={
           <Flex justify="space-between" align="center">
             <h3>Booking Managment</h3>
