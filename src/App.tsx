@@ -6,6 +6,9 @@ import ProtectedRoute from './components/ProtectedRoute';
 import CreateUpdate from './pages/create-update';
 import BookingView from './pages/booking-view';
 import UnProtectedRoute from './components/unProtectRoute';
+import Counter from './pages/counter/counter';
+import UseMemoUse from './pages/use-memo-use';
+import DropDownMultiple from './pages/drop-down-multiple';
 
 const App: React.FC = () => {
   // const [token, setToken] = useState<string>('');
@@ -69,6 +72,36 @@ const App: React.FC = () => {
         element={
           <ProtectedRoute>
             <CreateUpdate />
+          </ProtectedRoute>
+        }
+      />
+
+    <Route
+        path="/counter"
+        element={
+          <ProtectedRoute>
+            <Counter />
+          </ProtectedRoute>
+        }
+      />
+
+    <Route
+        path="/use-memo-use"
+        element={
+          <ProtectedRoute>
+            <UseMemoUse />
+          </ProtectedRoute>
+        }
+      />
+
+
+
+
+      <Route
+        path="/drop-down-multiple"
+        element={
+          <ProtectedRoute>
+            <DropDownMultiple />
           </ProtectedRoute>
         }
       />
